@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>אוטומציה בקלות — בוט WhatsApp שעונה ללקוחות שלכם 24/7</title>
+<meta name="description" content="בוט AI שעונה ללקוחות בוואטסאפ תוך שניות, קובע תורים ואוסף לידים. 30 יום חינם, ללא כרטיס אשראי.">
+<meta property="og:title" content="אוטומציה בקלות — בוט WhatsApp שעונה ללקוחות שלכם 24/7">
+<meta property="og:description" content="בוט AI שעונה ללקוחות בוואטסאפ תוך שניות, קובע תורים ואוסף לידים. 30 יום חינם, ללא כרטיס אשראי.">
+<meta property="og:locale" content="he_IL">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;800&family=Heebo:wght@400;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<div class="wrap hdr">
+<a class="logo" href="#top"><span class="dot"></span>אוטומציה בקלות</a>
+<nav><a href="#control">שליטה</a><a href="#what">מה מקבלים</a><a href="#panel">הפאנל</a><a href="#price">תמחור</a><a href="#faq">שאלות</a></nav>
+<a class="btn btn-wa" href="https://wa.me/972543978620">דברו איתנו<span class="arw">←</span></a>
+</div>
+</header>
+
+<section class="hero" id="top">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow" data-reveal>לקליניקות ולמטפלים שמנהלים תורים בוואטסאפ</div>
+<h1 data-reveal style="--i:1">בוט שבאמת עובד — ו<span class="em">אתם שולטים בו</span></h1>
+<p class="lede" data-reveal style="--i:2">הוא עונה ללקוחות שלכם תוך שניות, קובע תורים ביומן שלכם ואוסף כל פנייה לפאנל. אתם רואים כל מילה שנאמרת, ונכנסים לשיחה מתי שבא לכם.</p>
+<div class="hero-cta" data-reveal style="--i:3">
+<a class="btn btn-primary" href="https://ai-business-chatbot-kjm4.onrender.com/demo">סיור בפאנל האמיתי<span class="arw">←</span></a>
+<a class="btn btn-wa" href="https://wa.me/972543978620">התחילו 30 יום חינם<span class="arw">←</span></a>
+</div>
+<div class="trust" data-reveal style="--i:4"><span>ללא כרטיס אשראי</span><span>ללא התחייבות</span><span>WhatsApp API רשמי</span></div>
+</div>
+<div class="phone" data-reveal style="--i:2">
+<div class="phone-top"><div class="avatar">ר</div><div><b>הקליניקה שלך — מגיבה תמיד</b><small>מקוון</small></div></div>
+<div class="thread" id="thread"></div>
+<div class="phone-foot">
+<div class="takeover"><button id="takeover" type="button">קחו שליטה על השיחה</button><button id="replay" type="button" hidden>הפעילו מחדש</button></div>
+<p class="phone-note" id="chat-note">זמן תגובה: 3 שניות · הלקוחה ישנה. התור נקבע.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec dark" id="control">
+<div class="wrap">
+<div class="sec-head">
+<div class="eyebrow" data-reveal>מי מחזיק את ההגה</div>
+<h2 data-reveal style="--i:1">הבוט לא מדבר בשמכם. הוא מדבר מהמידע שאתם נתתם לו.</h2>
+<p class="lede" data-reveal style="--i:2">זו השאלה הראשונה שכל מטפלת שואלת אותנו, ולכן היא נמצאת כאן ולא בסוף הדף. כל שיחה נשמרת ומוצגת לכם בפאנל, בזמן אמת, כולל מה שהבוט ענה ומתי.</p>
+</div>
+<div class="control-grid">
+<div class="shot crop" data-reveal><img src="uploads/Screenshot_20260426_154500_Chrome.jpg" alt="מסך יומן שיחות בפאנל הניהול — רשימת לקוחות והיסטוריית ההודעות של כל אחד"></div>
+<div class="ctrl-list">
+<div class="ctrl-item" data-reveal style="--i:1"><span class="ctrl-num">01</span><div><h3>אתם רואים כל שיחה</h3><p>יומן שיחות מלא, לפי לקוח, עם כל מה שנאמר. אין הודעה שנשלחת בלי שתוכלו לקרוא אותה.</p></div></div>
+<div class="ctrl-item" data-reveal style="--i:2"><span class="ctrl-num">02</span><div><h3>נכנסים לשיחה בלחיצה</h3><p>ברגע שאתם עונים, הבוט משתתק ולא חוזר עד שתחזירו לו את השיחה. הלקוח לא מרגיש מעבר.</p></div></div>
+<div class="ctrl-item" data-reveal style="--i:3"><span class="ctrl-num">03</span><div><h3>הוא לא ממציא תשובות</h3><p>אין לו מידע מבוסס? הוא לא מנחש. הוא אומר שיבדוק ומעביר אליכם — וגם מראה לכם על מה לא ידע לענות.</p></div></div>
+<div class="ctrl-item" data-reveal style="--i:4"><span class="ctrl-num">04</span><div><h3>הטון הוא שלכם</h3><p>ידידותי, רשמי, יוקרתי או ניטרלי — או הנחיות שאתם כותבים בעצמכם, בדיוק בשפה שאתם מדברים עם המטופלים.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head">
+<div class="eyebrow" data-reveal>מה קורה בלי בוט</div>
+<h2 data-reveal style="--i:1">כל פנייה שלא נענית בזמן היא לקוח שהלך למישהו אחר</h2>
+<p class="lede" data-reveal style="--i:2">אתם באמצע טיפול, בפגישה, או פשוט ישנים. ההודעות ממשיכות להגיע — והלקוח לא מחכה.</p>
+</div>
+<div class="probs">
+<div class="prob" data-reveal><span class="tag">22:47</span><h3>הודעה שנכנסת בלילה</h3><p>ונענית למחרת בבוקר. עד אז היא כבר קבעה במקום אחר.</p></div>
+<div class="prob" data-reveal style="--i:1"><span class="tag">ללא מענה</span><h3>"כמה זה עולה?"</h3><p>השאלה הכי קלה בעולם, ואף אחד לא היה פנוי לענות עליה.</p></div>
+<div class="prob" data-reveal style="--i:2"><span class="tag">פתקים</span><h3>תורים בראש ועל הדלפק</h3><p>מי מגיע מחר? מי ביטל? מתי צריך לשלוח תזכורת?</p></div>
+<div class="prob" data-reveal style="--i:3"><span class="tag">שבועיים</span><h3>לידים שנעלמים בצ'אט</h3><p>מישהו התעניין, ואף אחד לא חזר אליו. הוא עדיין שם, איפשהו למעלה בשרשור.</p></div>
+</div>
+<p class="promise" data-reveal>כל פנייה נענית תוך <b>שניות</b> — גם ב-2 בלילה, גם בשבת, גם כשאתם באמצע טיפול.</p>
+</div>
+</section>
+
+<section class="sec" id="what" style="padding-top:0">
+<div class="wrap sec-head">
+<div class="eyebrow" data-reveal>מה מקבלים</div>
+<h2 data-reveal style="--i:1">שישה דברים שהבוט עושה במקומכם, כל יום</h2>
+<p class="lede" data-reveal style="--i:2">הכול על בסיס המידע שאתם נותנים לו — ואתם רואים כל שיחה בפאנל.</p>
+</div>
+<div class="wrap"><div class="feats">
+<div class="feat" data-reveal><span class="idx">01</span><h3>מענה 24/7 בשפה טבעית</h3><p>מחירים, שעות, מדיניות ביטולים, מיקום ושאלות נפוצות — בשיחה אמיתית, לא בתפריט לחצנים.</p></div>
+<div class="feat" data-reveal style="--i:1"><span class="idx">02</span><h3>קובע תורים ביומן שלכם</h3><p>מחובר ל-Google Calendar, מציג רק שעות פנויות באמת, ומוסיף את התור אוטומטית.</p></div>
+<div class="feat" data-reveal style="--i:2"><span class="idx">03</span><h3>זוכר כל לקוח</h3><p>מי הוא, מה שאל ומה חשוב לו. בפעם הבאה שהוא כותב — הבוט ממשיך מאיפה שהפסקתם.</p></div>
+<div class="feat" data-reveal style="--i:3"><span class="idx">04</span><h3>תזכורות שמונעות ביטולים</h3><p>יום לפני התור ושוב כמה שעות לפניו — פחות אי-הגעות, בלי שתזכירו לאף אחד.</p></div>
+<div class="feat" data-reveal style="--i:4"><span class="idx">05</span><h3>כל ליד נשמר לפאנל</h3><p>טבלה מסודרת עם חיפוש, תגיות והערות — במקום אקסלים ופניות שנופלות.</p></div>
+<div class="feat" data-reveal style="--i:5"><span class="idx">06</span><h3>פאנל שאתם שולטים בו</h3><p>לוח בקרה חי, כניסה לשיחה בלחיצה, אנליטיקות ועריכת המידע של העסק בכל רגע.</p></div>
+</div></div>
+</section>
+
+<section class="sec" id="panel" style="padding-top:clamp(50px,6vw,80px)">
+<div class="wrap">
+<div class="sec-head">
+<div class="eyebrow" data-reveal>הפאנל, בלי איפור</div>
+<h2 data-reveal style="--i:1">אלה מסכים אמיתיים מהמערכת שתקבלו</h2>
+<p class="lede" data-reveal style="--i:2">לא הדמיה ולא סרטון מבויים. אפשר גם להיכנס לסיור חי ולנווט בעצמכם.</p>
+<div class="hero-cta" data-reveal style="--i:3"><a class="btn btn-primary" href="https://ai-business-chatbot-kjm4.onrender.com/demo">כניסה לסיור בפאנל<span class="arw">←</span></a></div>
+</div>
+<div class="tour">
+<div class="shot-wrap" data-reveal><div class="shot crop"><img src="uploads/Screenshot_20260705_121851_Chrome.jpg" alt="תצוגת יומן חודשית בפאנל עם כל התורים שנקבעו"></div><div class="cap"><h3>יומן התורים</h3>תצוגה חודשית עם כל התורים שהבוט קבע, כולל שעה, שם ומצב אישור.</div></div>
+<div class="shot-wrap" data-reveal style="--i:1"><div class="shot crop"><img src="uploads/Screenshot_20260705_122337_Chrome.jpg" alt="מסך בסיס הידע — טבלת המידע שהבוט עונה על פיה"></div><div class="cap"><h3>בסיס הידע</h3>כאן יושב כל מה שהבוט יודע. משנים מחיר או שעה — והוא מכיר את השינוי מיד.</div></div>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div class="eyebrow" data-reveal>לא רק אנחנו אומרים</div>
+<h2 data-reveal style="--i:1">מה לקוחות אומרים עלינו</h2>
+</div>
+<div class="quotes">
+<blockquote data-reveal><p>מתוך ניסיון אמיתי בעבודה משותפת על פרויקט ללקוח עסקי. אמיר יודע להקשיב, להבין בדיוק מה צריך, ולבצע מהר… והכי חשוב בעיניי — יש לו הבנה של צד המשתמש, ורואים את זה בתוצאה.</p><footer><b>WeRAI</b>בינה עסקית לעסקים קטנים · מתאם לקוחות</footer></blockquote>
+<blockquote data-reveal style="--i:1"><p>אני ממליץ בחום על אמיר חיים. אדם מקצועי, אמין ונעים לעבוד איתו… הוא מביא איתו יכולת מצוינת לפתור בעיות בצורה יעילה וחכמה.</p><footer><b>לקוח עסקי</b>מערכת ניהול משלוחים (WhatsApp &amp; Telegram)</footer></blockquote>
+<blockquote data-reveal style="--i:2"><p>אמיר לקח את הרעיון שלי והפך אותו לאתר שעונה בדיוק על מה שדמיינתי… העבודה הייתה מהירה, נעימה ומקצועית. ממליצה בחום!</p><footer><b>מיזם חברתי</b>אתר שגרה לזמני חירום</footer></blockquote>
+</div>
+</div>
+</section>
+
+<section class="sec" id="price" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div class="eyebrow" data-reveal>תמחור</div>
+<h2 data-reveal style="--i:1">חודש שלם חינם, אחר כך מחיר אחד</h2>
+<p class="lede" data-reveal style="--i:2">בלי מדרגות מסובכות ובלי הפתעות. מנסים חינם, ואם זה מתאים — ממשיכים.</p>
+</div>
+<div class="price-grid" data-reveal>
+<div>
+<span class="badge">30 יום ניסיון חינם</span>
+<div class="big-price">0₪</div><p class="after" style="margin-top:6px">בדיוק מה שאתם משלמים עכשיו.</p>
+<p class="after">לאחר מכן <b>300₪ לחודש</b>. ללא כרטיס אשראי, ללא התחייבות — מפסיקים מתי שרוצים.</p>
+<div class="hero-cta"><a class="btn btn-wa" href="https://wa.me/972543978620">התחילו חודש ניסיון חינם<span class="arw">←</span></a></div>
+<p class="fineprint">אפשר לשדרג למודל AI חכם יותר בתוספת 30₪ לחודש.</p>
+</div>
+<ul class="incl">
+<li>חיבור רשמי ל-WhatsApp Business API</li>
+<li>דשבורד ניהול שיחות מלא, מכל מקום</li>
+<li>בוט AI שעונה ללקוחות 24/7 בשפה טבעית</li>
+<li>איסוף לידים אוטומטי ישירות לדשבורד</li>
+<li>תבניות הודעה, תזכורות וניהול הצעות מחיר</li>
+<li>הודעות ללא הגבלה בחלון 24 השעות</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div class="eyebrow" data-reveal>35 יכולות · הרשימה המלאה</div>
+<h2 data-reveal style="--i:1">למי שרוצה להעמיק</h2>
+<p class="lede" data-reveal style="--i:2">כל מה שהבוט ופאנל הניהול יודעים לעשות, מחולק לפי נושא. פתחו את מה שרלוונטי לכם.</p>
+</div>
+<div class="acc" data-reveal>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">שיחה חכמה וזיכרון לקוחות</span><span class="c">6 יכולות</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><ul class="caps">
+<li><b>מענה בזמן אמת 24/7</b> על כל שאלה — מחירים, שעות, מדיניות, מיקום, צוות ושאלות נפוצות, על בסיס המידע שאתם נותנים לו.</li>
+<li><b>הבוט זוכר את הלקוחות שלכם</b> — מי הם, מה שאלו ומה חשוב להם. בפעם הבאה שלקוח כותב, הבוט ממשיך מאיפה שהפסקתם.</li>
+<li><b>יודע מתי אתם פתוחים או סגורים</b> ומגיב בהתאם — בלי לקבוע תור לשעה שהעסק סגור בה.</li>
+<li><b>מציע שאלות המשך</b> אחרי כל תשובה, ואם הוא לא בטוח — מציע לנסח מחדש או להעביר אתכם ישירות.</li>
+<li><b>בוחרים לבוט אישיות</b> — ידידותי, רשמי, מכירתי, יוקרתי או ניטרלי — או כותבים לו הנחיות משלכם בדיוק בסגנון העסק.</li>
+<li><b>עונה רק על סמך המידע האמיתי שלכם</b> — אם אין לו תשובה מבוססת, הוא לא ממציא, אלא מפנה לנציג.</li>
+</ul></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">קביעת תורים וניהול יומן</span><span class="c">7 יכולות</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><ul class="caps">
+<li><b>קביעת תור אינטראקטיבית</b> — הלקוח בוחר שירות, תאריך ושעה, או פשוט כותב "מחר" או "יום ראשון" והבוט מבין.</li>
+<li><b>אתם בוחרים איך תורים מאושרים</b> — ידני (הכול מחכה לאישורכם), אוטומטי עם בדיקת יומן, או אוטומטי לגמרי.</li>
+<li><b>מחובר ליומן Google שלכם</b> — מציג ללקוח רק שעות פנויות באמת, ומוסיף את התור ליומן אוטומטית.</li>
+<li><b>תזכורות אוטומטיות</b> ללקוח — יום לפני התור, ושוב כמה שעות לפניו, כדי לצמצם ביטולים ואי-הגעות.</li>
+<li><b>הלקוח מבטל או משנה תור בעצמו</b> דרך הבוט, ואתם מקבלים על כך התראה מיידית.</li>
+<li><b>שולח ללקוח קובץ יומן</b> אחרי אישור התור, כדי שיוכל להוסיף אותו ליומן שלו בלחיצה.</li>
+<li><b>מרווח אוטומטי בין תורים</b> — אתם מגדירים כמה זמן להשאיר בין פגישה לפגישה, והבוט שומר על זה.</li>
+</ul></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">לידים, מעקב והפניות</span><span class="c">4 יכולות</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><ul class="caps">
+<li><b>כל ליד נשמר אוטומטית</b> בטבלה מסודרת בפאנל — בלי אקסלים ובלי פניות שנופלות בין הכיסאות.</li>
+<li><b>מעקב אחרי לקוחות "חמים"</b> — הבוט מזהה מי התעניין אבל לא סגר תור, ושולח לו הודעת המשך מותאמת.</li>
+<li><b>תוכנית "חבר מביא חבר"</b> — כל לקוח מקבל קוד הפניה אישי, ושני הצדדים מקבלים הנחה כשהחבר מגיע.</li>
+<li><b>כרטיס ביקור דיגיטלי וקוד QR</b> — הבוט שולח את פרטי העסק כאיש קשר מוכן, ומייצר QR לשילוט או לפרסום.</li>
+</ul></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">פאנל ניהול ותובנות</span><span class="c">6 יכולות</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><ul class="caps">
+<li><b>לוח בקרה חי</b> שמראה במבט אחד תורים חדשים, בקשות לנציג, שיחות פתוחות וסטטוס העסק.</li>
+<li><b>ניהול המידע של העסק</b> — מוסיפים או משנים שירות, מחיר או מדיניות, והבוט מכיר את השינוי מיד.</li>
+<li><b>אנליטיקות לפי תקופה</b> — כמה פניות היו, שעות השיא, מדדי מעורבות ומאיפה הלקוחות מגיעים.</li>
+<li><b>הבוט מראה לכם על מה הוא לא ידע לענות</b> — כדי שתשלימו את המידע החסר בלחיצה והוא ישתפר.</li>
+<li><b>ניהול שירותים, שעות פעילות וימים מיוחדים</b> — כולל זיהוי חגים ישראליים אוטומטי, עם אפשרות לבטל את הסגירה.</li>
+<li><b>רשימת לקוחות מלאה</b> עם חיפוש, תגיות, הערות אישיות ומספר התורים של כל אחד — וייצוא לאקסל בלחיצה.</li>
+</ul></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">שיחה חיה ומעבר לנציג</span><span class="c">3 יכולות</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><ul class="caps">
+<li><b>מעבר לנציג אנושי בלחיצה</b> — כשלקוח צריך אתכם, הבוט משתתק ואתם ממשיכים את השיחה בעצמכם מהפאנל.</li>
+<li><b>היסטוריית שיחה מלאה</b> של כל לקוח שמורה לכם, כך שתמיד יש הקשר לפני שאתם עונים.</li>
+<li><b>התראות בזמן אמת</b> על תור חדש, שינוי, ביטול או בקשת נציג — גם כשהדפדפן סגור.</li>
+</ul></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">שידורים ועדכונים ללקוחות</span><span class="c">4 יכולות</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><ul class="caps">
+<li><b>שידור הודעה לכל הלקוחות או לקבוצה מסוימת</b> — למשל רק מי שקבע תור, או הלקוחות הפעילים לאחרונה.</li>
+<li><b>עדכון על שינוי בשעות הפעילות</b> לכל הלקוחות בלחיצה אחת, בלי לשלוח הודעה אחת-אחת.</li>
+<li><b>קמפיינים מתוזמנים</b> — כותבים הודעה, בוחרים קהל וזמן, והמערכת שולחת לבד ומראה כמה נמסרו ונקראו.</li>
+<li><b>ניהול הרשמה לדיוור</b> — הלקוחות מצטרפים או מסירים את עצמם, כך שאתם שולחים רק למי שהסכים.</li>
+</ul></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">פרטיות, בקרה ותמיכה</span><span class="c">5 יכולות</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><ul class="caps">
+<li><b>עומד בחוק הפרטיות הישראלי (תיקון 13) וב-GDPR</b> — הסכמה מפורשת לפני איסוף מידע, בשקיפות מלאה.</li>
+<li><b>הלקוח שולט במידע שלו</b> — יכול לראות בכל רגע מה שמור עליו, ולמחוק הכול בפקודה אחת.</li>
+<li><b>מצב חופשה</b> — לחיצה אחת, והבוט מודיע ללקוחות שהעסק בחופשה וחוסם קביעת תורים לתקופה.</li>
+<li><b>חסימת לקוחות מטרידים</b> ישירות מהפאנל, כדי לשמור על שיחה נקייה ומכובדת.</li>
+<li><b>דיווח תקלות ישירות אלינו מהפאנל</b> — כולל צילום מסך — ואנחנו מטפלים עד שהכול עובד.</li>
+</ul></div></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:0">
+<div class="wrap">
+<div class="sec-head">
+<div class="eyebrow" data-reveal>יש לך שאלות? יש לנו תשובות</div>
+<h2 data-reveal style="--i:1">שאלות ותשובות</h2>
+<p class="lede" data-reveal style="--i:2">אלו השאלות שכל לקוח שואל לפני שמתחילים — ואנחנו מעדיפים לענות עליהן מראש.</p>
+</div>
+<div class="acc" data-single="1" data-reveal>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">אני לא איש טכנולוגיה, האם זה בשבילי?</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><p class="faq-a">כן. רוב הלקוחות שלנו הם בעלי עסקים, לא מפתחים. אנחנו מסבירים הכול בעברית פשוטה, מלווים אתכם בכל שלב, ומגישים מערכת שאפשר לנהל בעצמכם בלי להבין בקוד.</p></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">כמה זמן לוקח להתחיל?</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><p class="faq-a">לאחר אימות העסק, חיבור ל-WhatsApp API ועלייה לאוויר לוקחים עד חמישה ימי עסקים, תלוי באישורי Meta. לאחר מכן המערכת פעילה מיידית.</p></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">האם הפלטפורמה מתאימה לעסק קטן?</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><p class="faq-a">בהחלט. הבוט מתאים לכל עסק שרוצה לעשות סדר בוואטסאפ — מטיפול נפשי, מסעדות ונדל"ן ועד קוסמטיקה. אין צורך בידע טכני כלשהו.</p></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">מה אתם צריכים ממני?</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><p class="faq-a">רק רשימה מסודרת של שירותי העסק, מחירים, שעות פתיחה, וכל דבר שתרצו שהבוט יידע על העסק — ואנחנו נדאג לכל השאר.</p></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">אפשר לראות בדשבורד את הפגישות שנקבעו?</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><p class="faq-a">כן. יש בפאנל תצוגה חודשית של לוח שנה עם כל הפגישות בתוכו, כך שאתם תמיד יודעים מה מתוכנן.</p></div></div></div></div>
+<div class="acc-item"><button class="acc-btn" type="button" aria-expanded="false"><span class="pm"></span><span class="t">איך מתחילים?</span></button><div class="acc-panel"><div class="acc-inner"><div class="acc-body"><p class="faq-a">משאירים פרטים בצ'אט ואנחנו חוזרים אליכם בהקדם 🙂</p></div></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="dark final">
+<div class="wrap">
+<h2 data-reveal>מוכנים לתת לבוט לענות במקומכם?</h2>
+<p class="lede" data-reveal style="--i:1">חודש ניסיון מלא, בלי כרטיס אשראי ובלי התחייבות. אם זה לא מתאים — פשוט מפסיקים.</p>
+<div class="hero-cta" data-reveal style="--i:2">
+<a class="btn btn-wa" href="https://wa.me/972543978620">שלחו הודעה בוואטסאפ<span class="arw">←</span></a>
+<a class="btn btn-ghost" href="https://ai-business-chatbot-kjm4.onrender.com/demo">סיור בפאנל<span class="arw">←</span></a>
+</div>
+<div class="card-person" data-reveal style="--i:3">
+<div class="avatar">א</div>
+<div>
+<div class="who"><b>אמיר בירון</b>מפתח · אוטומציה בקלות</div>
+<p>אני בונה את המערכת, אני מקים אותה אצלכם, ואני זה שעונה כשמשהו לא עובד. מדברים איתי — לא עם מוקד.</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap foot">
+<span>© 2026 אוטומציה בקלות · בוטים ואוטומציות לעסקים</span>
+<a class="mono" href="https://wa.me/972543978620">wa.me/972543978620</a>
+</div>
+</footer>
+
+<div class="dock"><a class="btn btn-wa" href="https://wa.me/972543978620">התחילו 30 יום חינם<span class="arw">←</span></a></div>
+<script src="app.js"></script>
+</body>
+</html>
